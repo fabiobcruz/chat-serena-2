@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>WhatsApp Chat</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <!-- Meta Pixel Code -->
+   <script>
+   !function(f,b,e,v,n,t,s)
+   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+   n.queue=[];t=b.createElement(e);t.async=!0;
+   t.src=v;s=b.getElementsByTagName(e)[0];
+   s.parentNode.insertBefore(t,s)}(window, document,'script',
+   'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '1020229979535028');
+   fbq('track', 'PageView');
+   </script>
+   <noscript><img height="1" width="1" style="display:none"
+   src="https://www.facebook.com/tr?id=1020229979535028&ev=PageView&noscript=1"/>
+   </noscript>
+   <!-- End Meta Pixel Code -->
+
+   <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+  ></script>
+
+  <script>
+    window.pixelId = "6807ef3144ffc6102cf6a594";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+    ttq.load('D0M6E2JC77U00BTUIPIG');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Chat Header -->
+    <div class="chat-header">
+      <div class="contact-info">
+        <div class="back-button">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="contact-avatar">
+          <img src="assets/avatar.png" alt="Contact Avatar">
+        </div>
+        <div class="contact-details">
+          <div class="contact-name">Master Serena</div>
+          <div class="contact-status">online</div>
+        </div>
+      </div>
+      <div class="header-buttons">
+        <!--
+        <i class="fas fa-video"></i>
+        <i class="fas fa-phone"></i>
+        <i class="fas fa-ellipsis-v"></i>
+        -->
+      </div>
+    </div>
+    
+    <!-- Chat Messages Area -->
+    <div class="chat-messages">
+      <!-- Messages will be added here dynamically -->
+    </div>
+    
+    <!-- Response Options Area -->
+    <div id="response-options" class="response-options"></div>
+  </div>
+
+  <!-- Import Scripts -->
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/messages.js"></script>
+  <script src="scripts/chat.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function getAllParams(url) {
+            const urlObj = new URL(url);
+            let paramString = "";
+
+            // Iterando sobre todos os parâmetros da URL
+            for (const [key, value] of urlObj.searchParams) {
+                paramString += `${paramString ? '&' : ''}${key}=${value}`;
+            }
+
+            return paramString;
+        }
+
+        const params = getAllParams(window.location.href);
+
+        if (params) {
+            const links = document.querySelectorAll("a");
+
+            links.forEach(link => {
+                const separator = link.href.includes("?") ? "&" : "?";
+                link.href += `${separator}${params}`;
+            });
+        }
+    });
+  </script>
+  <script>
+    function isMobileDevice() {
+      return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+    }
+
+    function scrollToTopOnInputFocus() {
+      if (!isMobileDevice()) return;
+
+      const inputs = document.querySelectorAll('input, textarea, select');
+
+      inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+          // Força scroll total para o topo
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', scrollToTopOnInputFocus);
+  </script>
+
+</body>
+</html>
