@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-purple-950 text-white;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .tarot-card {
+    @apply w-full h-80 md:h-96 perspective-1000;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .tarot-card.locked {
+    filter: grayscale(0.3) brightness(0.7);
+  }
+  
+  .tarot-card.locked:hover {
+    transform: scale(0.98);
+  }
+  
+  .tarot-card:not(.locked):hover {
+    transform: scale(1.02);
+  }
+  
+  .card-inner {
+    @apply relative w-full h-full transition-transform duration-1000 transform-style-3d shadow-xl;
+  }
+  
+  .flipped .card-inner {
+    @apply rotate-y-180;
+  }
+  
+  .card-back, .card-front {
+    @apply absolute w-full h-full backface-hidden rounded-lg;
+  }
+  
+  .card-front {
+    @apply rotate-y-180;
+  }
+  
+  .card-back-design {
+    @apply w-full h-full opacity-80;
+  }
+}
+
+/* Custom CSS classes that Tailwind doesn't provide */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
