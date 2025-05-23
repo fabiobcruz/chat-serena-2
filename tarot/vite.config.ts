@@ -3,7 +3,7 @@
 
    export default defineConfig({
      plugins: [react()],
-     base: 'https://serenamaster.site/', // URL base para domínio personalizado
+     base: '/', // URL base para domínio personalizado
      build: {
        outDir: 'dist',
      },
