@@ -2481,7 +2481,7 @@ function processFinalConfirmation(response) {
                                                                     
                                                                     // Criar link clicável
                                                                     const imageLink = document.createElement('a');
-                                                                    imageLink.href = 'https://pay.hotmart.com/T99830488I?off=av5jrxsl';
+                                                                    imageLink.href = 'https://pay.hotmart.com/V100040518W';
                                                                     imageLink.target = '_blank'; // Abrir em nova aba
                                                                     
                                                                     // Adicionar imagem dentro do link
