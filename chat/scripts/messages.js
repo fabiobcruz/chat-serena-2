@@ -2,24 +2,24 @@
 const messageData = [
   {
     type: 'text',
-    content: '⌛️Tu prueba está comenzando...',
+    content: '⌛️Your test is starting...',
     delay: 0,
     skipTyping: true // Esta mensagem deve aparecer sem o efeito de digitando
   },
   {
     type: 'text',
-    content: '¡Hola, mi amado! Me alegra mucho y agradezco que hayas decidido seguir tu corazón y encontrarme aquí hoy. 🙏🔮',
+    content: 'Hello, my beloved! I am very happy and grateful that you decided to follow your heart and find me here today. 🙏🔮',
     delay: 2000
   },
   {
     type: 'text',
-    content: 'Me llamo Serena y me hice famosa en 2023 por <strong>unir almas</strong> gemelas a través de mis dibujos. En solo <strong>2 minutos</strong>, visualizaré y dibujaré el rostro de tu alma gemela...',
+    content: 'My name is Serena and I became famous in 2023 for <strong>uniting soul</strong> mates through my drawings. In just <strong>2 minutes</strong>, I will visualize and draw the face of your soulmate...',
     delay: 4000,
     isHTML: true
   },
   {
     type: 'text',
-    content: '<strong>¿Puedo empezar a dibujar?</strong> Debo advertirte que esto puede hacerte llorar o conmoverte, pero creo que querrás ver... 💕✨',
+    content: '<strong>Can I start drawing?</strong> I must warn you that this may make you cry or move you, but I think you\'ll want to see... 💕✨',
     delay: 5000,
     isHTML: true
   }

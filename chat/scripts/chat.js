@@ -127,7 +127,7 @@ function showResponseButtons(options) {
           hideTypingIndicator();
           
           // Criar e mostrar a próxima mensagem
-          const nextMessageContent = "Antes de empezar, ¿podrías decirme <strong>tu nombre</strong>?";
+          const nextMessageContent = "Before we start, could you tell me <strong>your name</strong>?";
           const nextTime = getCurrentTime();
           const messageEl = createTextMessage(nextMessageContent, nextTime, true);
           chatMessages.appendChild(messageEl);
@@ -170,7 +170,7 @@ function displayMessage(messageInfo) {
     // mostrar o botão de resposta inicial apenas se não houver mensagens do usuário
     if (userMessages.length === 0) {
       setTimeout(() => {
-        showResponseButtons(["¡Sí, quiero descubrir a mi alma gemela!"]);
+        showResponseButtons(["Yes, I want to discover my soulmate!"]);
       }, 1000);
     }
     return;
@@ -189,7 +189,7 @@ function displayMessage(messageInfo) {
     } else if (userMessages.length === 0) {
       // All messages displayed and no user messages yet, show response buttons
       setTimeout(() => {
-        showResponseButtons(["¡Sí, quiero descubrir a mi alma gemela!"]);
+        showResponseButtons(["Yes, I want to discover my soulmate!"]);
       }, 1000);
     }
     return;
@@ -230,7 +230,7 @@ function displayMessage(messageInfo) {
     } else if (userMessages.length === 0) {
       // All messages displayed and no user messages yet, show response buttons
       setTimeout(() => {
-        showResponseButtons(["¡Sí, quiero descubrir a mi alma gemela!"]);
+        showResponseButtons(["Yes, I want to discover my soulmate!"]);
       }, 1000);
     }
     return;
@@ -315,7 +315,7 @@ function displayMessage(messageInfo) {
     } else if (userMessages.length === 0) {
       // All messages displayed and no user messages yet, show response buttons
       setTimeout(() => {
-        showResponseButtons(["¡Sí, quiero descubrir a mi alma gemela!"]);
+        showResponseButtons(["Yes, I want to discover my soulmate!"]);
       }, 1000);
     }
   }, Math.random() * 1000 + 1000); // Random delay between 1-2 seconds to simulate typing
@@ -556,7 +556,7 @@ function showNameInput() {
   // Criar o campo de entrada
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Digite seu nome...';
+  input.placeholder = 'Enter your name...';
   input.className = 'name-input';
   
   // Criar o botão de envio
@@ -669,7 +669,7 @@ function sendNameResponse(name) {
       hideTypingIndicator();
       
       // Criar e mostrar a próxima mensagem, substituindo {{NOME}} pelo nome do usuário
-      const nextMessageContent = `Es un placer hablar contigo, <strong>${userName}</strong>. ¡Tengo muchísimas ganas de empezar a crear tu dibujo!`;
+      const nextMessageContent = `It's a pleasure to talk to you, <strong>${userName}</strong>. I'm really looking forward to starting your drawing!`;
       const currentTime = getCurrentTime();
       const messageEl = createTextMessage(nextMessageContent, currentTime, true);
       chatMessages.appendChild(messageEl);
@@ -697,7 +697,7 @@ function sendNameResponse(name) {
           hideTypingIndicator();
           
           // Criar e mostrar a próxima mensagem
-          const message1Content = "Tengo el presentimiento de que esta persona llegará a tu vida en los <strong>próximos días</strong> ❤️‍🔥";
+          const message1Content = "I have a feeling that this person will come into your life in the <strong>next few days</strong> ❤️‍🔥";
           const currentTime1 = getCurrentTime();
           const message1El = createTextMessage(message1Content, currentTime1, true);
           chatMessages.appendChild(message1El);
@@ -725,7 +725,7 @@ function sendNameResponse(name) {
               hideTypingIndicator();
               
               // Criar e mostrar a próxima mensagem
-              const message2Content = "Pero antes de continuar, déjame explicarte cómo funciona el procedimiento para que podamos comenzar con tu dibujo.";
+              const message2Content = "But before we continue, let me explain how the procedure works so we can start with your drawing.";
               const currentTime2 = getCurrentTime();
               const message2El = createTextMessage(message2Content, currentTime2, false);
               chatMessages.appendChild(message2El);
@@ -788,7 +788,7 @@ function sendNameResponse(name) {
                         hideTypingIndicator();
                         
                         // Criar e mostrar a próxima mensagem
-                        const nextMessageContent = "<strong>¿Puedo empezar con las preguntas?</strong> Recuerda no cruzar las piernas ni los brazos…";
+                        const nextMessageContent = "<strong>Can I start with the questions?</strong> Remember not to cross your legs or arms…";
                         const currentTime4 = getCurrentTime();
                         const messageEl = createTextMessage(nextMessageContent, currentTime4, true);
                         chatMessages.appendChild(messageEl);
@@ -807,7 +807,7 @@ function sendNameResponse(name) {
                         
                         // Mostrar botão de resposta após a mensagem
                         setTimeout(() => {
-                          showResponseButtons(["Sí, estoy listo"]);
+                          showResponseButtons(["Yes, I am ready"]);
                           
                           // Ajustar o comportamento do botão de resposta específico para o áudio
                           const responseButton = document.querySelector('.response-button');
@@ -825,7 +825,7 @@ function sendNameResponse(name) {
                               }
                               
                               // Processar a resposta
-                              processAudioResponse("Sí, estoy listo");
+                              processAudioResponse("Yes, I am ready");
                             });
                           }
                         }, 1000);
@@ -898,8 +898,8 @@ function processAudioResponse(responseText) {
       // Esconder o indicador de digitação
       hideTypingIndicator();
       
-      // Mostrar a mensagem em espanhol sobre o signo
-      const nextMessageContent = "¿Cuál es tu signo?";
+      // Mostrar a mensagem sobre o signo
+      const nextMessageContent = "What is your zodiac sign?";
       const currentTime = getCurrentTime();
       const messageEl = createTextMessage(nextMessageContent, currentTime, false);
       chatMessages.appendChild(messageEl);
@@ -987,7 +987,7 @@ function showSignInput() {
   // Criar o campo de entrada
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Escribe tu signo...';
+  input.placeholder = 'Write your zodiac sign...';
   input.className = 'sign-input name-input'; // Reutilizando os estilos do name-input
   
   // Criar o botão de envio
@@ -1115,7 +1115,7 @@ function sendSignResponse(sign) {
       hideTypingIndicator();
       
       // Criar e mostrar a mensagem personalizada com nome e signo
-      const nextMessageContent = `Qué casualidad, <strong>${userName}</strong>, yo también soy <strong>${signText}</strong>.`;
+      const nextMessageContent = `What a coincidence, <strong>${userName}</strong>, I am also <strong>${signText}</strong>.`;
       const currentTime = getCurrentTime();
       const messageEl = createTextMessage(nextMessageContent, currentTime, true);
       chatMessages.appendChild(messageEl);
@@ -1143,7 +1143,7 @@ function sendSignResponse(sign) {
           hideTypingIndicator();
           
           // Criar e mostrar a próxima mensagem
-          const birthdateMessageContent = "¿Cual es tu fecha de nacimiento?";
+          const birthdateMessageContent = "What is your date of birth?";
           const currentTime2 = getCurrentTime();
           const birthdateMessageEl = createTextMessage(birthdateMessageContent, currentTime2, false);
           chatMessages.appendChild(birthdateMessageEl);
@@ -1185,7 +1185,7 @@ function showBirthdateInput() {
   // Criar o campo de entrada
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Ejemplo: 15/03/1990';
+  input.placeholder = 'Example: 03/15/1990';
   input.className = 'birthdate-input name-input'; // Reutilizando os estilos
   
   // Criar o botão de envio
@@ -1295,7 +1295,7 @@ function sendBirthdateResponse(birthdate) {
       hideTypingIndicator();
       
       // Criar e mostrar a próxima mensagem
-      const birthtimeMessageContent = "¿A qué hora naciste? Si no sabes la hora exacta, no te preocupes.";
+      const birthtimeMessageContent = "What time were you born? If you don't know the exact time, don't worry.";
       const currentTime = getCurrentTime();
       const birthtimeMessageEl = createTextMessage(birthtimeMessageContent, currentTime, false);
       chatMessages.appendChild(birthtimeMessageEl);
@@ -1335,7 +1335,7 @@ function showBirthtimeInput() {
   // Criar o campo de entrada
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Ejemplo: 15:30';
+  input.placeholder = 'Example: 15:30';
   input.className = 'birthtime-input name-input'; // Reutilizando os estilos
   
   // Criar o botão de envio
@@ -1448,7 +1448,7 @@ function sendBirthtimeResponse(birthtime) {
       hideTypingIndicator();
       
       // Criar e mostrar a mensagem final
-      const loveLifeMessageContent = "Y por último ¿Cómo va tu vida amorosa?";
+      const loveLifeMessageContent = "And finally, how is your love life?";
       const currentTime = getCurrentTime();
       const loveLifeMessageEl = createTextMessage(loveLifeMessageContent, currentTime, false);
       chatMessages.appendChild(loveLifeMessageEl);
@@ -1468,9 +1468,9 @@ function sendBirthtimeResponse(birthtime) {
       // Mostrar os botões com as opções de vida amorosa após um pequeno delay
       setTimeout(() => {
         const loveLifeOptions = [
-          "Estoy en una relación seria.",
-          "Estoy conociendo a alguien o hablando con alguien.",
-          "¡Estoy soltero/a en este momento!"
+          "I am in a serious relationship.",
+          "I am getting to know someone or talking to someone.",
+          "I am single at the moment!"
         ];
         showLoveLifeOptions(loveLifeOptions);
       }, 1000);
@@ -1575,7 +1575,7 @@ function processLoveLifeResponse(response) {
         // Enviar mensagem após um certo tempo
         setTimeout(() => {
             hideTypingIndicator();
-            const botResponse = "Me alegra saber que te va bien en la vida.";
+            const botResponse = "I'm glad to know that you're doing well in life.";
             const currentTime = getCurrentTime();
             const messageEl = createTextMessage(botResponse, currentTime, false);
             chatMessages.appendChild(messageEl);
@@ -1595,7 +1595,7 @@ function processLoveLifeResponse(response) {
                 
                 setTimeout(() => {
                     hideTypingIndicator();
-                    const botResponse2 = "Generalmente, las personas que buscan pareja suelen tener suerte en sus relaciones, y tú pareces ser una de ellas.";
+                    const botResponse2 = "Generally, people who seek a partner tend to have luck in their relationships, and you seem to be one of them.";
                     const currentTime2 = getCurrentTime();
                     const messageEl2 = createTextMessage(botResponse2, currentTime2, false);
                     chatMessages.appendChild(messageEl2);
@@ -1642,7 +1642,7 @@ function processLoveLifeResponse(response) {
                                     
                                     setTimeout(() => {
                                         hideTypingIndicator();
-                                        const botResponse3 = "Voy a enviarles las historias de algunas mujeres que recibieron un dibujo idéntico al de sus parejas...";
+                                        const botResponse3 = `Generally, people of ${window.userSignData?.content || "your zodiac sign"} tend to have luck in relationships, and you seem to be one of them.`;
                                         const currentTime4 = getCurrentTime();
                                         const messageEl3 = createTextMessage(botResponse3, currentTime4, false);
                                         chatMessages.appendChild(messageEl3);
@@ -1663,13 +1663,13 @@ function processLoveLifeResponse(response) {
                                             setTimeout(() => {
                                                 hideTypingIndicator();
                                                 const currentTime5 = getCurrentTime();
-                                                const imageEl1 = createImageMessage("assets/img-1.png", null, currentTime5);
+                                                const imageEl1 = createImageMessage("assets/img-1.webp", null, currentTime5);
                                                 chatMessages.appendChild(imageEl1);
                                                 
                                                 // Adicionar ao array displayedMessages 
                                                 displayedMessages.push({
                                                   type: 'image',
-                                                  content: "assets/img-1.png",
+                                                  content: "assets/img-1.webp",
                                                   caption: null,
                                                   time: currentTime5
                                                 });
@@ -1680,7 +1680,7 @@ function processLoveLifeResponse(response) {
                                                     
                                                     setTimeout(() => {
                                                         hideTypingIndicator();
-                                                        const imageText1 = "¡Esta es Mayara, ella adquirió nuestra oferta adicional que revela el nombre y características de la persona del dibujo!";
+                                                        const imageText1 = "This is Mayara, she purchased our additional offer that reveals the name and characteristics of the person in the drawing!";
                                                         const currentTime6 = getCurrentTime();
                                                         const textMessageEl1 = createTextMessage(imageText1, currentTime6, false);
                                                         chatMessages.appendChild(textMessageEl1);
@@ -1718,7 +1718,7 @@ function processLoveLifeResponse(response) {
                                                                     
                                                                     setTimeout(() => {
                                                                         hideTypingIndicator();
-                                                                        const imageText2 = "Esta es Olivia. ¡En menos de un mes, ya encontró a la persona del dibujo!";
+                                                                        const imageText2 = "This is Olivia. In less than a month, she already found the person in the drawing!";
                                                                         const currentTime8 = getCurrentTime();
                                                                         const textMessageEl2 = createTextMessage(imageText2, currentTime8, false);
                                                                         chatMessages.appendChild(textMessageEl2);
@@ -1740,7 +1740,7 @@ function processLoveLifeResponse(response) {
                                                                                 hideTypingIndicator();
                                                                                 // Obter o nome do userMessages[1] (segunda mensagem)
                                                                                 const userName = userMessages.length > 1 ? userMessages[1].content : '';
-                                                                                const finalQuestion = `¿No es increíble, <strong>${userName}</strong>? ¿Te gustaría ver también las características de tu alma gemela?`;
+                                                                                const finalQuestion = `Isn't it amazing, <strong>${userName}</strong>? Would you like to see the characteristics of your soulmate too?`;
                                                                                 const currentTime9 = getCurrentTime();
                                                                                 const finalMessageEl = createTextMessage(finalQuestion, currentTime9, true);
                                                                                 chatMessages.appendChild(finalMessageEl);
@@ -1757,8 +1757,8 @@ function processLoveLifeResponse(response) {
                                                                                 // Botões de resposta
                                                                                 setTimeout(() => {
                                                                                     const drawingOptions = [
-                                                                                        "Sí, quiero ver las características de mi alma gemela!",
-                                                                                        "Prefiero ver solo el dibujo, por favor!"
+                                                                                        "Yes, I want to see the characteristics of my soulmate!",
+                                                                                        "I prefer to see just the drawing, please!"
                                                                                     ];
                                                                                     showDrawingOptions(drawingOptions);
                                                                                 }, 1000);
@@ -1868,55 +1868,39 @@ function processDrawingResponse(response) {
     
     // Primeira mensagem de confirmação
     setTimeout(() => {
-        showTypingIndicator();
+        // Removendo o primeiro balão "Perfecto! Procesaré tu solicitud ahora mismo..."
+        // e indo direto para a segunda mensagem
         
+        // Segunda mensagem perguntando se pode começar o desenho
         setTimeout(() => {
-            hideTypingIndicator();
-            let botResponse = "Perfecto! Procesaré tu solicitud ahora mismo...";
-            const currentTime1 = getCurrentTime();
-            const messageEl = createTextMessage(botResponse, currentTime1, false);
-            chatMessages.appendChild(messageEl);
+            showTypingIndicator();
             
-            // Adicionar ao array displayedMessages 
-            displayedMessages.push({
-                type: 'text',
-                content: botResponse,
-                time: currentTime1,
-                isHTML: false
-            });
-            // Removendo chamada ao saveChatData()
-            
-            // Segunda mensagem perguntando se pode começar o desenho
             setTimeout(() => {
-                showTypingIndicator();
+                hideTypingIndicator();
+                // Obter o nome do usuário (segunda mensagem)
+                const userName = userMessages.length > 1 ? userMessages[1].content : '';
+                const drawMessage = `Perfecto, <strong>${userName}</strong>. ¿Puedo empezar a crear tu dibujo?`;
+                const currentTime2 = getCurrentTime();
+                const drawMessageEl = createTextMessage(drawMessage, currentTime2, true);
+                chatMessages.appendChild(drawMessageEl);
                 
+                // Adicionar ao array displayedMessages 
+                displayedMessages.push({
+                    type: 'text',
+                    content: drawMessage,
+                    time: currentTime2,
+                    isHTML: true
+                });
+                // Removendo chamada ao saveChatData()
+                
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Mostrar campo de entrada que não armazena informação
                 setTimeout(() => {
-                    hideTypingIndicator();
-                    // Obter o nome do usuário (segunda mensagem)
-                    const userName = userMessages.length > 1 ? userMessages[1].content : '';
-                    const drawMessage = `Perfecto, <strong>${userName}</strong>. ¿Puedo empezar a crear tu dibujo?`;
-                    const currentTime2 = getCurrentTime();
-                    const drawMessageEl = createTextMessage(drawMessage, currentTime2, true);
-                    chatMessages.appendChild(drawMessageEl);
-                    
-                    // Adicionar ao array displayedMessages 
-                    displayedMessages.push({
-                        type: 'text',
-                        content: drawMessage,
-                        time: currentTime2,
-                        isHTML: true
-                    });
-                    // Removendo chamada ao saveChatData()
-                    
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                    
-                    // Mostrar campo de entrada que não armazena informação
-                    setTimeout(() => {
-                        showConfirmDrawingInput();
-                    }, 1000);
-                }, 2000);
+                    showConfirmDrawingInput();
+                }, 1000);
             }, 2000);
-        }, 2000);
+        }, 1000);
     }, 1000);
 }
 
@@ -1935,7 +1919,7 @@ function showConfirmDrawingInput() {
     // Criar o campo de entrada
     const input = document.createElement('input');
     input.type = 'text';
-    input.placeholder = 'Tu respuesta...';
+    input.placeholder = 'Your answer...';
     input.className = 'confirm-drawing-input name-input';
     
     // Criar o botão de envio
@@ -2106,7 +2090,7 @@ function processConfirmDrawingResponse(response) {
                                 
                                 setTimeout(() => {
                                     hideTypingIndicator();
-                                    const astralMessage = "Estoy consultando tu carta astral. Por favor, no cruces los brazos ni las piernas. ¡Estoy visualizando información muy importante sobre tu alma gemela!";
+                                    const astralMessage = "I am consulting your astral chart. Please, don't cross your arms or legs. I am visualizing very important information about your soulmate!";
                                     const currentTime4 = getCurrentTime();
                                     const astralMessageEl = createTextMessage(astralMessage, currentTime4, false);
                                     chatMessages.appendChild(astralMessageEl);
@@ -2128,7 +2112,7 @@ function processConfirmDrawingResponse(response) {
                                         
                                         setTimeout(() => {
                                             hideTypingIndicator();
-                                            const finalAnalysisMessage = "Analizaré tu Carta profundamente y con mi Don me concentraré para dibujar el rostro que estoy visualizando.";
+                                            const finalAnalysisMessage = "Analyze your Chart deeply and with my Gift I will concentrate to draw the face I am visualizing.";
                                             const currentTime5 = getCurrentTime();
                                             const finalAnalysisMessageEl = createTextMessage(finalAnalysisMessage, currentTime5, false);
                                             chatMessages.appendChild(finalAnalysisMessageEl);
@@ -2208,7 +2192,7 @@ function processConfirmDrawingResponse(response) {
                                                                         
                                                                         setTimeout(() => {
                                                                             hideTypingIndicator();
-                                                                            const confirmMessage = "Para enviarte el dibujo en cuanto lo termine, solo necesito tu confirmación. ¡Haz clic en el botón de abajo para confirmar!";
+                                                                            const confirmMessage = "To send you the drawing as soon as I'm finished, I just need your confirmation. Click the button below to confirm!";
                                                                             const currentTime8 = getCurrentTime();
                                                                             const confirmMessageEl = createTextMessage(confirmMessage, currentTime8, false);
                                                                             chatMessages.appendChild(confirmMessageEl);
@@ -2227,7 +2211,7 @@ function processConfirmDrawingResponse(response) {
                                                                             // Mostrar botão de confirmação
                                                                             setTimeout(() => {
                                                                                 const confirmOptions = [
-                                                                                    "¡SÍ, DIBUJA A MI ALMA GEMELA!"
+                                                                                    "YES, DRAW MY SOULMATE!"
                                                                                 ];
                                                                                 showFinalConfirmation(confirmOptions);
                                                                             }, 1000);
@@ -2334,277 +2318,254 @@ function processFinalConfirmation(response) {
     // Rolar para baixo
     chatMessages.scrollTop = chatMessages.scrollHeight;
     
-    // Primeira mensagem de confirmação
+    // Removendo a mensagem "¡Perfecto! Ya estoy trabajando en tu dibujo. Te avisaré cuando esté listo."
+    // e indo direto para a primeira mensagem sobre momento especial
     setTimeout(() => {
         showTypingIndicator();
         
         setTimeout(() => {
             hideTypingIndicator();
-            const finalResponse = "¡Perfecto! Ya estoy trabajando en tu dibujo. Te avisaré cuando esté listo.";
-            const currentTime1 = getCurrentTime();
-            const finalResponseEl = createTextMessage(finalResponse, currentTime1, false);
-            chatMessages.appendChild(finalResponseEl);
+            const specialMomentMessage = "You are about to experience a special moment! But now, pay close attention, dear...";
+            const currentTime2 = getCurrentTime();
+            const specialMomentEl = createTextMessage(specialMomentMessage, currentTime2, false);
+            chatMessages.appendChild(specialMomentEl);
             
             // Adicionar ao array displayedMessages 
             displayedMessages.push({
                 type: 'text',
-                content: finalResponse,
-                time: currentTime1,
+                content: specialMomentMessage,
+                time: currentTime2,
                 isHTML: false
             });
             // Removendo chamada ao saveChatData()
             
             chatMessages.scrollTop = chatMessages.scrollHeight;
             
-            // Primeira mensagem sobre momento especial
+            // Segunda mensagem sobre não cobrar pela consulta
             setTimeout(() => {
                 showTypingIndicator();
                 
                 setTimeout(() => {
                     hideTypingIndicator();
-                    const specialMomentMessage = "¡Estás a punto de vivir un momento especial! Pero ahora, presta mucha atención, querida...";
-                    const currentTime2 = getCurrentTime();
-                    const specialMomentEl = createTextMessage(specialMomentMessage, currentTime2, false);
-                    chatMessages.appendChild(specialMomentEl);
+                    const freeConsultMessage = "I don't charge anything for the consultation.";
+                    const currentTime3 = getCurrentTime();
+                    const freeConsultEl = createTextMessage(freeConsultMessage, currentTime3, false);
+                    chatMessages.appendChild(freeConsultEl);
                     
                     // Adicionar ao array displayedMessages 
                     displayedMessages.push({
                         type: 'text',
-                        content: specialMomentMessage,
-                        time: currentTime2,
+                        content: freeConsultMessage,
+                        time: currentTime3,
                         isHTML: false
                     });
                     // Removendo chamada ao saveChatData()
                     
                     chatMessages.scrollTop = chatMessages.scrollHeight;
                     
-                    // Segunda mensagem sobre não cobrar pela consulta
+                    // Primeiro áudio (5.mp3 em vez de 6.mp3)
                     setTimeout(() => {
                         showTypingIndicator();
                         
                         setTimeout(() => {
                             hideTypingIndicator();
-                            const freeConsultMessage = "No cobro nada por la consulta.";
-                            const currentTime3 = getCurrentTime();
-                            const freeConsultEl = createTextMessage(freeConsultMessage, currentTime3, false);
-                            chatMessages.appendChild(freeConsultEl);
+                            const currentTime4 = getCurrentTime();
+                            const audioEl1 = createAudioMessage("0:19", currentTime4, "assets/5.mp3");
+                            chatMessages.appendChild(audioEl1);
                             
                             // Adicionar ao array displayedMessages 
                             displayedMessages.push({
-                                type: 'text',
-                                content: freeConsultMessage,
-                                time: currentTime3,
-                                isHTML: false
+                                type: 'audio',
+                                duration: "0:19",
+                                audioSrc: "assets/5.mp3",
+                                time: currentTime4
                             });
                             // Removendo chamada ao saveChatData()
                             
                             chatMessages.scrollTop = chatMessages.scrollHeight;
                             
-                            // Primeiro áudio (5.mp3 em vez de 6.mp3)
+                            // Reproduzir o áudio automaticamente após um pequeno delay
                             setTimeout(() => {
-                                showTypingIndicator();
+                                // Encontrar o botão de play do áudio e simular o clique
+                                const playButton = audioEl1.querySelector('.play-button');
+                                if (playButton) {
+                                    playButton.click();
+                                }
                                 
+                                // Mensagem sobre o valor da tarifa após 19 segundos (em vez de 23)
                                 setTimeout(() => {
-                                    hideTypingIndicator();
-                                    const currentTime4 = getCurrentTime();
-                                    const audioEl1 = createAudioMessage("0:19", currentTime4, "assets/5.mp3");
-                                    chatMessages.appendChild(audioEl1);
+                                    showTypingIndicator();
                                     
-                                    // Adicionar ao array displayedMessages 
-                                    displayedMessages.push({
-                                        type: 'audio',
-                                        duration: "0:19",
-                                        audioSrc: "assets/5.mp3",
-                                        time: currentTime4
-                                    });
-                                    // Removendo chamada ao saveChatData()
-                                    
-                                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                                    
-                                    // Reproduzir o áudio automaticamente após um pequeno delay
                                     setTimeout(() => {
-                                        // Encontrar o botão de play do áudio e simular o clique
-                                        const playButton = audioEl1.querySelector('.play-button');
-                                        if (playButton) {
-                                            playButton.click();
-                                        }
+                                        hideTypingIndicator();
+                                        const priceMessage = "The fee is only <strong>$19.90</strong>";
+                                        const currentTime5 = getCurrentTime();
+                                        const priceMessageEl = createTextMessage(priceMessage, currentTime5, true);
+                                        chatMessages.appendChild(priceMessageEl);
                                         
-                                        // Mensagem sobre o valor da tarifa após 19 segundos (em vez de 23)
+                                        // Adicionar ao array displayedMessages 
+                                        displayedMessages.push({
+                                            type: 'text',
+                                            content: priceMessage,
+                                            time: currentTime5,
+                                            isHTML: true
+                                        });
+                                        // Removendo chamada ao saveChatData()
+                                        
+                                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                                        
+                                        // Segundo áudio (6.mp3 em vez de 7.mp3)
                                         setTimeout(() => {
                                             showTypingIndicator();
                                             
                                             setTimeout(() => {
                                                 hideTypingIndicator();
-                                                const priceMessage = "La tarifa es de solo <strong>$19.90</strong>";
-                                                const currentTime5 = getCurrentTime();
-                                                const priceMessageEl = createTextMessage(priceMessage, currentTime5, true);
-                                                chatMessages.appendChild(priceMessageEl);
+                                                const currentTime6 = getCurrentTime();
+                                                const audioEl2 = createAudioMessage("0:23", currentTime6, "assets/6.mp3");
+                                                chatMessages.appendChild(audioEl2);
                                                 
                                                 // Adicionar ao array displayedMessages 
                                                 displayedMessages.push({
-                                                    type: 'text',
-                                                    content: priceMessage,
-                                                    time: currentTime5,
-                                                    isHTML: true
+                                                    type: 'audio',
+                                                    duration: "0:23",
+                                                    audioSrc: "assets/6.mp3",
+                                                    time: currentTime6
                                                 });
                                                 // Removendo chamada ao saveChatData()
                                                 
                                                 chatMessages.scrollTop = chatMessages.scrollHeight;
                                                 
-                                                // Segundo áudio (6.mp3 em vez de 7.mp3)
+                                                // Reproduzir o segundo áudio automaticamente após um pequeno delay
                                                 setTimeout(() => {
-                                                    showTypingIndicator();
+                                                    // Encontrar o botão de play do áudio e simular o clique
+                                                    const playButton = audioEl2.querySelector('.play-button');
+                                                    if (playButton) {
+                                                        playButton.click();
+                                                    }
                                                     
+                                                    // Mensagem final sobre o pagamento após 23 segundos (em vez de 24)
                                                     setTimeout(() => {
-                                                        hideTypingIndicator();
-                                                        const currentTime6 = getCurrentTime();
-                                                        const audioEl2 = createAudioMessage("0:23", currentTime6, "assets/6.mp3");
-                                                        chatMessages.appendChild(audioEl2);
+                                                        showTypingIndicator();
                                                         
-                                                        // Adicionar ao array displayedMessages 
-                                                        displayedMessages.push({
-                                                            type: 'audio',
-                                                            duration: "0:23",
-                                                            audioSrc: "assets/6.mp3",
-                                                            time: currentTime6
-                                                        });
-                                                        // Removendo chamada ao saveChatData()
-                                                        
-                                                        chatMessages.scrollTop = chatMessages.scrollHeight;
-                                                        
-                                                        // Reproduzir o segundo áudio automaticamente após um pequeno delay
                                                         setTimeout(() => {
-                                                            // Encontrar o botão de play do áudio e simular o clique
-                                                            const playButton = audioEl2.querySelector('.play-button');
-                                                            if (playButton) {
-                                                                playButton.click();
-                                                            }
+                                                            hideTypingIndicator();
+                                                            const paymentMessage = "I'll leave a button below for you to make the payment. Afterward, I'll send you the portrait of your soulmate by email and provide you with personal guidance over the next few months so that the universe can quickly manifest the person destined to have a special connection with you.";
+                                                            const currentTime7 = getCurrentTime();
+                                                            const paymentMessageEl = createTextMessage(paymentMessage, currentTime7, false);
+                                                            chatMessages.appendChild(paymentMessageEl);
                                                             
-                                                            // Mensagem final sobre o pagamento após 23 segundos (em vez de 24)
+                                                            // Adicionar ao array displayedMessages 
+                                                            displayedMessages.push({
+                                                                type: 'text',
+                                                                content: paymentMessage,
+                                                                time: currentTime7,
+                                                                isHTML: false
+                                                            });
+                                                            // Removendo chamada ao saveChatData()
+                                                            
+                                                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                                                            
+                                                            // Adicionar imagem clicável como link para pagamento
                                                             setTimeout(() => {
                                                                 showTypingIndicator();
                                                                 
                                                                 setTimeout(() => {
                                                                     hideTypingIndicator();
-                                                                    const paymentMessage = "Dejaré un botón abajo para que realices el pago. Después, te enviaré el retrato de tu alma gemela por correo electrónico y te brindaré orientación personal durante los próximos meses para que el universo pueda manifestar rápidamente a la persona destinada a tener una conexión especial contigo.";
-                                                                    const currentTime7 = getCurrentTime();
-                                                                    const paymentMessageEl = createTextMessage(paymentMessage, currentTime7, false);
-                                                                    chatMessages.appendChild(paymentMessageEl);
+                                                                    
+                                                                    // Criar elemento de mensagem para a imagem clicável
+                                                                    const imageMessageEl = document.createElement('div');
+                                                                    imageMessageEl.className = 'message received';
+                                                                    
+                                                                    const imageMessageContent = document.createElement('div');
+                                                                    imageMessageContent.className = 'message-content';
+                                                                    
+                                                                    // Criar link clicável
+                                                                    const imageLink = document.createElement('a');
+                                                                    imageLink.href = 'https://pay.hotmart.com/T99830488I?off=av5jrxsl';
+                                                                    imageLink.target = '_blank'; // Abrir em nova aba
+                                                                    
+                                                                    // Adicionar imagem dentro do link
+                                                                    const imageElement = document.createElement('img');
+                                                                    imageElement.src = 'assets/btn.webp';
+                                                                    imageElement.className = 'chat-image';
+                                                                    imageElement.alt = 'Make payment';
+                                                                    
+                                                                    // Montar a estrutura
+                                                                    imageLink.appendChild(imageElement);
+                                                                    
+                                                                    const imageMessageText = document.createElement('div');
+                                                                    imageMessageText.className = 'message-text image-container';
+                                                                    imageMessageText.appendChild(imageLink);
+                                                                    
+                                                                    const imageTimeContainer = document.createElement('div');
+                                                                    imageTimeContainer.className = 'message-time-container';
+                                                                    
+                                                                    const imageTime = document.createElement('span');
+                                                                    imageTime.className = 'message-time';
+                                                                    imageTime.textContent = getCurrentTime();
+                                                                    
+                                                                    imageTimeContainer.appendChild(imageTime);
+                                                                    
+                                                                    imageMessageContent.appendChild(imageMessageText);
+                                                                    imageMessageContent.appendChild(imageTimeContainer);
+                                                                    imageMessageEl.appendChild(imageMessageContent);
+                                                                    
+                                                                    // Adicionar a mensagem ao chat
+                                                                    chatMessages.appendChild(imageMessageEl);
                                                                     
                                                                     // Adicionar ao array displayedMessages 
+                                                                    const imageTime8 = getCurrentTime();
                                                                     displayedMessages.push({
-                                                                        type: 'text',
-                                                                        content: paymentMessage,
-                                                                        time: currentTime7,
-                                                                        isHTML: false
+                                                                        type: 'image',
+                                                                        content: 'assets/btn.webp',
+                                                                        caption: null,
+                                                                        time: imageTime8
                                                                     });
                                                                     // Removendo chamada ao saveChatData()
                                                                     
                                                                     chatMessages.scrollTop = chatMessages.scrollHeight;
                                                                     
-                                                                    // Adicionar imagem clicável como link para pagamento
+                                                                    // Adicionar mensagem de áudio após imagem (7.mp3 em vez de 8.mp3)
                                                                     setTimeout(() => {
                                                                         showTypingIndicator();
                                                                         
                                                                         setTimeout(() => {
                                                                             hideTypingIndicator();
-                                                                            
-                                                                            // Criar elemento de mensagem para a imagem clicável
-                                                                            const imageMessageEl = document.createElement('div');
-                                                                            imageMessageEl.className = 'message received';
-                                                                            
-                                                                            const imageMessageContent = document.createElement('div');
-                                                                            imageMessageContent.className = 'message-content';
-                                                                            
-                                                                            // Criar link clicável
-                                                                            const imageLink = document.createElement('a');
-                                                                            imageLink.href = 'https://pay.hotmart.com/T99830488I?off=av5jrxsl';
-                                                                            imageLink.target = '_blank'; // Abrir em nova aba
-                                                                            
-                                                                            // Adicionar imagem dentro do link
-                                                                            const imageElement = document.createElement('img');
-                                                                            imageElement.src = 'assets/img-3.png';
-                                                                            imageElement.className = 'chat-image';
-                                                                            imageElement.alt = 'Realizar pago';
-                                                                            
-                                                                            // Montar a estrutura
-                                                                            imageLink.appendChild(imageElement);
-                                                                            
-                                                                            const imageMessageText = document.createElement('div');
-                                                                            imageMessageText.className = 'message-text image-container';
-                                                                            imageMessageText.appendChild(imageLink);
-                                                                            
-                                                                            const imageTimeContainer = document.createElement('div');
-                                                                            imageTimeContainer.className = 'message-time-container';
-                                                                            
-                                                                            const imageTime = document.createElement('span');
-                                                                            imageTime.className = 'message-time';
-                                                                            imageTime.textContent = getCurrentTime();
-                                                                            
-                                                                            imageTimeContainer.appendChild(imageTime);
-                                                                            
-                                                                            imageMessageContent.appendChild(imageMessageText);
-                                                                            imageMessageContent.appendChild(imageTimeContainer);
-                                                                            imageMessageEl.appendChild(imageMessageContent);
-                                                                            
-                                                                            // Adicionar a mensagem ao chat
-                                                                            chatMessages.appendChild(imageMessageEl);
+                                                                            const currentTime9 = getCurrentTime();
+                                                                            const audioEl3 = createAudioMessage("0:24", currentTime9, "assets/7.mp3");
+                                                                            chatMessages.appendChild(audioEl3);
                                                                             
                                                                             // Adicionar ao array displayedMessages 
-                                                                            const imageTime8 = getCurrentTime();
                                                                             displayedMessages.push({
-                                                                                type: 'image',
-                                                                                content: 'assets/img-3.png',
-                                                                                caption: null,
-                                                                                time: imageTime8
+                                                                                type: 'audio',
+                                                                                duration: "0:24",
+                                                                                audioSrc: "assets/7.mp3",
+                                                                                time: currentTime9
                                                                             });
                                                                             // Removendo chamada ao saveChatData()
                                                                             
                                                                             chatMessages.scrollTop = chatMessages.scrollHeight;
                                                                             
-                                                                            // Adicionar mensagem de áudio após imagem (7.mp3 em vez de 8.mp3)
+                                                                            // Reproduzir o áudio automaticamente após um pequeno delay
                                                                             setTimeout(() => {
-                                                                                showTypingIndicator();
-                                                                                
-                                                                                setTimeout(() => {
-                                                                                    hideTypingIndicator();
-                                                                                    const currentTime9 = getCurrentTime();
-                                                                                    const audioEl3 = createAudioMessage("0:24", currentTime9, "assets/7.mp3");
-                                                                                    chatMessages.appendChild(audioEl3);
-                                                                                    
-                                                                                    // Adicionar ao array displayedMessages 
-                                                                                    displayedMessages.push({
-                                                                                        type: 'audio',
-                                                                                        duration: "0:24",
-                                                                                        audioSrc: "assets/7.mp3",
-                                                                                        time: currentTime9
-                                                                                    });
-                                                                                    // Removendo chamada ao saveChatData()
-                                                                                    
-                                                                                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                                                                                    
-                                                                                    // Reproduzir o áudio automaticamente após um pequeno delay
-                                                                                    setTimeout(() => {
-                                                                                        // Encontrar o botão de play do áudio e simular o clique
-                                                                                        const playButton = audioEl3.querySelector('.play-button');
-                                                                                        if (playButton) {
-                                                                                            playButton.click();
-                                                                                        }
-                                                                                    }, 1000);
-                                                                                }, 2000);
-                                                                            }, 2000);
+                                                                                // Encontrar o botão de play do áudio e simular o clique
+                                                                                const playButton = audioEl3.querySelector('.play-button');
+                                                                                if (playButton) {
+                                                                                    playButton.click();
+                                                                                }
+                                                                            }, 1000);
                                                                         }, 2000);
                                                                     }, 2000);
                                                                 }, 2000);
-                                                            }, 23000); // 23 segundos para ouvir o segundo áudio (em vez de 24)
-                                                        }, 1000);
-                                                    }, 2000);
-                                                }, 2000);
+                                                            }, 2000);
+                                                        }, 2000);
+                                                    }, 23000); // 23 segundos para ouvir o segundo áudio (em vez de 24)
+                                                }, 1000);
                                             }, 2000);
-                                        }, 19000); // 19 segundos para ouvir o primeiro áudio (em vez de 23)
-                                    }, 1000);
-                                }, 2000);
-                            }, 2000);
+                                        }, 2000);
+                                    }, 2000);
+                                }, 19000); // 19 segundos para ouvir o primeiro áudio (em vez de 23)
+                            }, 1000);
                         }, 2000);
                     }, 2000);
                 }, 2000);

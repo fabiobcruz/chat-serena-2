@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,17 +99,17 @@
         </div>
 
         <div id="quiz-content" class="w-full max-w-md text-center">
-            <h2 id="question-text" class="text-xl font-medium mb-8">¿Qué color de piel prefieres?</h2>
+            <h2 id="question-text" class="text-xl font-medium mb-8">What skin color do you prefer?</h2>
             <div id="options-container" class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-10 mb-8">
                 <label for="option-black" class="flex items-center cursor-pointer text-lg option-label">
                     <input type="radio" name="skin_color_preference" id="option-black" value="Black">
                     <span class="option-dot"></span>
-                    <span>Negro</span>
+                    <span>Black</span>
                 </label>
                 <label for="option-white" class="flex items-center cursor-pointer text-lg option-label">
                     <input type="radio" name="skin_color_preference" id="option-white" value="White">
                     <span class="option-dot"></span>
-                    <span>Blanco</span>
+                    <span>White</span>
                 </label>
             </div>
             <button
@@ -117,7 +117,7 @@
                 type="button"
                 class="w-full max-w-xs gradient-button text-white font-semibold py-3 px-4 rounded-lg shadow-md hover:opacity-90 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled>
-                Siguiente
+                Next
             </button>
         </div>
 
@@ -128,7 +128,7 @@
                     <span id="progress-percentage" class="progress-percentage">0%</span>
                 </div>
             </div>
-            <p id="loading-text" class="text-lg font-medium text-gray-300">Generando Retrato de Tu Pareja Perfecta</p>
+            <p id="loading-text" class="text-lg font-medium text-gray-300">Generating Portrait of Your Perfect Partner</p>
         </div>
 
     </div>
@@ -174,7 +174,7 @@
                     clearInterval(progressInterval);
                     setTimeout(() => {
                         console.log("Loading complete. Redirecting...");
-                        // Novo: envia parâmetro skin na URL
+                        // New: sends skin parameter in URL
                         let skinParam = '';
                         if (selectedValue === 'White') skinParam = 'HB';
                         if (selectedValue === 'Black') skinParam = 'HN';

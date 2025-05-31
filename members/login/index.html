@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,15 +35,15 @@
             <img src="img/logo.svg" alt="Logo">
         </div>
 
-        <h1 class="text-3xl font-bold mb-1">Lectura astral</h1>
-        <p class="text-sm text-gray-300 mb-8">y dibujo de alma gemela</p>
+        <h1 class="text-3xl font-bold mb-1">Astral reading</h1>
+        <p class="text-sm text-gray-300 mb-8">and soulmate drawing</p>
 
         <form class="w-full max-w-xs" id="email-form">
-            <label for="email" class="block text-xs text-left text-gray-400 mb-2 ml-1">Inicia sesión con tu correo:</label>
+            <label for="email" class="block text-xs text-left text-gray-400 mb-2 ml-1">Login with your email:</label>
             <input
                 type="email"
                 id="email"
-                placeholder="Escribe tu correo electrónico"
+                placeholder="Enter your email address"
                 class="w-full px-4 py-2 mb-6 bg-slate-700 bg-opacity-50 border border-purple-400 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
                 required
             >
@@ -51,11 +51,11 @@
                 type="submit"
                 class="w-full gradient-button text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:opacity-90 transition duration-300"
             >
-                Entrar
+                Enter
             </button>
         </form>
 
-        <p class="mt-16 text-xs text-gray-400 tracking-wider">MAESTRA SERENA</p>
+        <p class="mt-16 text-xs text-gray-400 tracking-wider">MASTER SERENA</p>
     </div>
 
     <script>
@@ -66,14 +66,14 @@
             emailForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Verifica se já existe uma escolha salva
+                // Check if there's already a saved choice
                 const hasQuizCompleted = localStorage.getItem('soulmateDrawingPdf');
                 
                 if (hasQuizCompleted) {
-                    // Se já respondeu o quiz, vai direto para a página de resultado
+                    // If already answered the quiz, go directly to the results page
                     window.location.href = "../logged/index.html";
                 } else {
-                    // Se não respondeu, vai para o quiz
+                    // If not answered, go to the quiz
                     window.location.href = "../quiz/index.html";
                 }
             });
