@@ -2398,7 +2398,7 @@ function processFinalConfirmation(response) {
                                     
                                     setTimeout(() => {
                                         hideTypingIndicator();
-                                        const priceMessage = "The fee is only <strong>$19.90</strong>";
+                                        const priceMessage = "The fee is only <strong>$23</strong>";
                                         const currentTime5 = getCurrentTime();
                                         const priceMessageEl = createTextMessage(priceMessage, currentTime5, true);
                                         chatMessages.appendChild(priceMessageEl);
