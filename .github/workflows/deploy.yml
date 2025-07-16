@@ -2,38 +2,38 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    paths:
+      - 'tarot/**'  # Só executa se houver alteração na pasta tarot
 
 permissions:
-  contents: write # Esta linha é importante!
+  contents: write  # Necessário para o deploy funcionar
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: tarot/package-lock.json
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-    - name: Install dependencies
-      run: |
-        cd tarot
-        npm ci
+      - name: Install dependencies
+        run: |
+          cd tarot
+          npm install
 
-    - name: Build
-      run: |
-        cd tarot
-        npm run build
+      - name: Build project
+        run: |
+          cd tarot
+          npm run build
 
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: tarot/dist
-        branch: gh-pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: tarot/dist
+          branch: gh-pages
