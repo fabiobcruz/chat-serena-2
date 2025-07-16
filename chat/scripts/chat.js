@@ -1,10 +1,4 @@
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-subids
-  async
-  defer
-></script>/
-    / DOM Elements
+ / DOM Elements
 const chatMessages = document.querySelector('.chat-messages');
 // Esses elementos foram removidos do HTML, então não devemos referenciá-los
 // const chatInput = document.querySelector('.chat-input');
